@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold">My Shop</h1>
+      <h1 className="text-xl font-bold">Urban Threads</h1>
       <div className="flex items-center space-x-4">
         {username && <span className="text-lg">Welcome, {username}</span>}
         <button

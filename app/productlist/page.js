@@ -31,7 +31,7 @@ const ProductList = () => {
           }
         );
         setProducts(response.data.data);
-        setFilteredProducts(response.data.data); // Set initial filtered data
+        setFilteredProducts(response.data.data); 
       } catch (error) {
         setError("Failed to fetch products");
       } finally {
@@ -49,28 +49,28 @@ const ProductList = () => {
   const applyFilters = () => {
     let updatedProducts = [...products];
 
-    // Apply price filter
+    
     if (filters.price) {
       updatedProducts = updatedProducts.filter(
         (product) => product.price <= filters.price
       );
     }
 
-    // Apply color filter
+ 
     if (filters.colors.length > 0) {
       updatedProducts = updatedProducts.filter((product) =>
         filters.colors.some((color) => product.color.includes(color))
       );
     }
 
-    // Apply size filter
+
     if (filters.sizes.length > 0) {
       updatedProducts = updatedProducts.filter((product) =>
         filters.sizes.some((size) => product.sizes.includes(size))
       );
     }
 
-    // Apply sorting
+
     if (filters.sort) {
       if (filters.sort === "Price Low - High") {
         updatedProducts.sort((a, b) => a.price - b.price);
@@ -103,16 +103,15 @@ const ProductList = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {filteredProducts.map((product, index) => (
               <div key={index}
-              // className="border p-4 rounded-lg shadow-md"
               >
                 <img src={product.image_url} alt={product.name} className="rounded-md aspect-[4/5] object-cover object-top" />
                 <div className="space-y-1">
-                  <div>
-                    <p className="mt-4 font-medium truncate">{product.name}</p>
+                  <div className="flex items-center justify-between">
+                        <h2 className="font-bold">{product.name}</h2>
                   </div>
                 </div>
-                {/* <h2 className="font-bold">{product.name}</h2> */}
-                <p>Price: ₹{product.price}</p>
+            
+                <p className="">Price: ₹{product.price}</p>
                 <p>Colors: {product.color.join(", ")}</p>
                 <p>Sizes: {product.sizes.join(", ")}</p>
               </div>
