@@ -11,9 +11,9 @@ import * as yup from "yup";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock, faMobile, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-// import Lottie from "lottie-react";
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import successAnimation from "/success.json";
+import Lottie from "lottie-react";
+// const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+import successAnimation from "../public/success.json";
 
 // Validation Schema using Yup
 const validationSchema = yup.object().shape({
@@ -87,7 +87,7 @@ const LoginForm = () => {
   return (
     <div className="flex justify-center items-center min-h-screen"
     style={{
-      backgroundImage: `url('/Register.jpg')`,
+      backgroundImage: `url('../public/Register.jpg')`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
