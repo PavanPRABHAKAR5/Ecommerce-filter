@@ -87,7 +87,7 @@ const LoginForm = () => {
   return (
     <div className="flex justify-center items-center min-h-screen"
     style={{
-      backgroundImage: `url('../public/Register.jpg')`,
+      backgroundImage: `url('/Register.jpg')`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",

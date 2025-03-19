@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    serverExternalPackages: ["lottie-react"],
+};
 
 export default nextConfig;
