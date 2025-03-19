@@ -3,6 +3,7 @@
 
 import React, { useState } from "react";
 import '../app/styles/LoginForm.css'
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -11,8 +12,8 @@ import * as yup from "yup";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock, faMobile, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import Lottie from "lottie-react";
-// const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+// import Lottie from "lottie-react";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import successAnimation from "../public/success.json";
 
 // Validation Schema using Yup
